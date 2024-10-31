@@ -1,6 +1,6 @@
 name = "nada"
 version = "0.1.0"
-authors = [""]
+authors = ["SK Singh"]
 
 [[programs]]
 path = "src/main.py"
