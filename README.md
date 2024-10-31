@@ -45,6 +45,40 @@ The Secure Financial Health Calculator uses Nillion's secure computation to proc
 
 ## Technical Architecture
 
+# Secure Financial Health Calculator Architecture
+
+```mermaid
+flowchart TD
+
+subgraph Secure_Financial_Health_Calculator
+    A[User Interface]
+    A -->|Secure Authentication| B[Authentication System]
+    B -->|Role-Based Access Control| C[Computation Engine]
+    B -->|Session Management| C
+    
+    C -->|Encrypted Data Processing| D[Data Storage & Retrieval]
+    D -->|Secure Value Storage with TTL| D1[Data Encryption]
+    D1 -->|Secure Retrieval Mechanisms| D2[Data Persistence]
+
+    C -->|Encrypted Data Processing| E[Result Processing]
+    E -->|Role-Specific Filtering| F[User]
+    E -->|Role-Specific Filtering| G[Financial Advisor]
+    E -->|Role-Specific Filtering| H[Regulator]
+end
+
+subgraph Security_Features
+    C -->|End-to-End Encryption| D
+    C -->|Zero-Knowledge Computation| I[Secure Key Management]
+    I -->|Granular Output Control| D1
+end
+
+subgraph Core_Components
+    B -->|Cryptographic Keys| J[Secure Integer Creation]
+    J -->|Input Validation| K[Program Management]
+    K -->|Version Control| D
+    D -->|Execution Management| E
+end
+```
 ### Core Components
 
 #### 1. Authentication System
@@ -66,7 +100,6 @@ app/components/Compute.tsx
 #### 3. Data Storage & Retrieval
 
 app/components/StoreValue.tsx
-
 
 - Secure value storage with TTL
 - Encrypted data persistence
