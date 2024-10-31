@@ -27,8 +27,13 @@ export const Compute: FC = () => {
     // Note: This is hardcoded for demo purposes.
     // Feel free to change the NamedValue to your required program values.
     const values = NadaValues.create()
-      .insert(NamedValue.parse("my_int1"), NadaValue.createSecretInteger(2))
-      .insert(NamedValue.parse("my_int2"), NadaValue.createSecretInteger(4));
+      .insert(NamedValue.parse("monthly_income"), NadaValue.createSecretInteger(5000))
+      .insert(NamedValue.parse("total_debt"), NadaValue.createSecretInteger(15000))
+      .insert(NamedValue.parse("monthly_savings"), NadaValue.createSecretInteger(1000))
+      .insert(NamedValue.parse("monthly_expenses"), NadaValue.createSecretInteger(3000))
+      .insert(NamedValue.parse("credit_score"), NadaValue.createSecretInteger(700))
+      .insert(NamedValue.parse("investment_amount"), NadaValue.createSecretInteger(10000))
+      .insert(NamedValue.parse("age"), NadaValue.createSecretInteger(35));
 
     nilCompute.execute({ bindings, values });
   };
