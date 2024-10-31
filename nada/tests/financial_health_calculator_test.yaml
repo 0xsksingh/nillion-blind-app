@@ -1,0 +1,24 @@
+---
+program: financial_health_calculator
+inputs:
+  age: 3
+  credit_score: 3
+  monthly_expenses: 3
+  monthly_income: 3
+  monthly_savings: 3
+  total_debt: 3
+expected_outputs:
+  client_age_risk: 0
+  client_credit_risk: 50
+  client_debt_ratio: 100
+  client_risk_level: 55
+  client_savings_ratio: 100
+  client_score: 25
+  debt_ratio: 100
+  disposable_income: 0
+  entity_debt_ratio: 100
+  entity_risk_level: 55
+  health_score: 25
+  recommended_safe_allocation: 30
+  risk_level: 55
+  savings_ratio: 100
